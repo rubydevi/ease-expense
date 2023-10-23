@@ -4,10 +4,7 @@
   </div>
   <div class="col-8">
     <p><%= category.name %></p>
-    <%
-=begin%>
-  add sum later
-<%
-=end%>
+    <p>$ <%= format('%.2f', category.expenses.sum(:amount)) %></p>
+    <p><%= category.updated_at.strftime('%d %b %Y') %></p>
   </div>
 </div>

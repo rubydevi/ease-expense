@@ -2,7 +2,6 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
     @user = current_user
-    # add sum later
   end
 
   def new
