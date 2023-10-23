@@ -1,0 +1,7 @@
+<% if @category_expenses.present? %>
+  <% @category_expenses.each do |expense_category| %>
+    <%= expense_category.expense.name %>
+    <%= expense_category.expense.amount %>
+  <% end %>
+<% end %>
+<%= link_to "add a new transaction", new_user_category_expense_path %>

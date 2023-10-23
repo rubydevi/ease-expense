@@ -1,0 +1,18 @@
+<%= form_for @expense, url: user_category_expenses_path, method: :post do |f| %>
+  <div class="col-sm-6">
+    <%= f.text_field :name, class: "form-control", placeholder: "Name", required: true %>
+    <%= f.number_field :amount, class: "form-control", placeholder: "Amount", required: true %>
+  </div>
+  
+  <div class="col-sm-6">
+    <%= f.select :id,
+      Category.all.map { |category| [category.name, category.id] },
+      { include_blank: 'Category' },
+      class: "form-select"
+    %>
+  </div>
+  
+  <div class="col-sm-6">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+<% end %>
