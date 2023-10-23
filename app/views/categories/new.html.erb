@@ -1,0 +1,21 @@
+<%= form_with(model: @category, url: user_categories_path) do |form| %>
+<div class="row mb-3">
+  <%
+=begin%>
+ <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label> 
+<%
+=end%>
+
+  <%= form.label :name, class: "col-sm-2 col-form-label" %>
+  <div class="col-sm-10">
+    <%= form.text_field :name, class: "form-control form-control", placeholder: "category name" %>
+  </div>
+</div>
+<div class="row mb-3">
+  <%= form.label :icon, class: "col-sm-2 col-form-label" %>
+  <div class="col-sm-10">
+    <%= form.text_field :icon, class: "form-control form-control", placeholder: "Category Icon URL" %>
+  </div>
+</div>
+<%= form.submit "Save", class: "btn btn-primary" %>
+<% end %>
