@@ -1,0 +1,22 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <nav class="bg-primary text-white d-flex justify-content-between p-1">
+    <div class="fs-1">
+      <a href="<%= root_path %>" class="text-white">
+        <i class="bi bi-arrow-left-short"></i>
+      </a>
+    </div>
+    <h5  class="d-flex justify-content-center align-items-center mb-0">LOGIN</h5>
+    <%= f.submit "Log In", class: "btn btn-link text-decoration-none text-white" %>
+  </nav>
+
+  <div class=" mt-3">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-control" %>
+  </div>
+<% end %>
+<div class="text-center">
+  <%= render "devise/shared/links" %>
+</div>

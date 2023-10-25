@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: proxima-nova, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.welcome-title {
+  font-family: 'Lemonada', cursive;
+}
+
+.form-control,
+.form-select {
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  font-size: 0.9rem;
+  color: #a6a9ae;
+}
+
+.btn,
+.card {
+  border-radius: 2px;
+}
+
+.btn-primary,
+.bg-primary {
+  background-color: #3778c2 !important;
+}
+
+.btn-success,
+.bg-success {
+  background-color: #5fb532 !important;
+}
+
+.btn-success {
+  border-color: #fff !important;
+}
+
+.text {
+  color: #434b54;
+}
+
+.text-secondary {
+  color: #86898e !important;
+}
+
+.text-fade {
+  color: #989da3 !important;
+}
