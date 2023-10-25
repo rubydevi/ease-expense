@@ -1,2 +1,25 @@
-<h1>Categories</h1>
-<%= link_to "Add Category", new_user_category_path %>
+<nav class="bg-primary text-white d-flex justify-content-between p-1">
+  <div class="fs-1">
+    <i class="bi bi-list"></i>
+  </div>
+  <h5 class="d-flex justify-content-center align-items-center mb-0">CATEGORIES</h5>
+  <div class="fs-2">
+    <i class="bi bi-search"></i>
+  </div>
+</nav>
+<% if @categories.empty? %>
+  <p>No categories added yet</p>
+<% else %>
+  <ul class="p-4">
+    <% @categories.each do |category| %>
+      <li>
+        <a href="<%= user_category_expenses_path(user_id: @user.id, category_id: category.id) %>">
+          <%= render partial: 'shared/category_card', locals: { category: category } %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+<div class="d-flex justify-content-center fixed-bottom p-3 bg-success">
+  <%= link_to "Add Category", new_user_category_path, class: "btn btn-success w-100 p-2" %>
+</div>

@@ -1,0 +1,25 @@
+<nav class="bg-primary text-white d-flex p-1" style="column-gap: 23%;">
+  <div class="fs-1">
+    <a href="<%= user_categories_path %>" class="text-white">
+      <i class="bi bi-arrow-left-short"></i>
+    </a>
+  </div>
+  <h5  class="d-flex align-items-center mb-0 fs-5">NEW CATEGORY</h5>
+</nav>
+<div class="container">
+  <%= form_with(model: @category, url: user_categories_path) do |form| %>
+    <div class="form-floating mb-3">
+      <%= form.text_field :name, class: "form-control", placeholder: "category name" %>
+      <%= form.label :name, class: "col-sm-2 col-form-label" %>
+    </div>
+
+    <div class="form-floating">
+      <%= form.text_field :icon, class: "form-control", placeholder: "Category Icon URL" %>
+      <%= form.label :icon, class: "col-sm-2 col-form-label" %>
+    </div>
+
+    <div class="d-flex justify-content-center p-3 bg-success">
+      <%= form.submit "Save", class: "btn btn-success w-100 p-2" %>
+    </div>
+  <% end %>
+</div>

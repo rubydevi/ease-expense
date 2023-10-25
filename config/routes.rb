@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   
   root to: "welcome#index"
   resources :users do
-    resources :categories
-    resources :expenses
+    resources :categories do
+      resources :expenses
+    end
   end
 end

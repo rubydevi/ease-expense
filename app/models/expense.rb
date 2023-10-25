@@ -1,5 +1,5 @@
 class Expense < ApplicationRecord
-  belongs_to :author, foreign_key: 'author_id'
+  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
 
   has_many :expense_categories, dependent: :destroy
   has_many :categories, through: :expense_categories, dependent: :destroy
