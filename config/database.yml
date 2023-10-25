@@ -89,6 +89,7 @@ test:
 #
 production:
   <<: *default
-  database: ease_expense_production
-  username: ease_expense
-  password: <%= ENV["EASE_EXPENSE_DATABASE_PASSWORD"] %>
+  # database: ease_expense_production
+  # username: ease_expense
+  # password: <%= ENV["EASE_EXPENSE_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
