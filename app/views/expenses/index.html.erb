@@ -1,7 +1,36 @@
-<% if @category_expenses.present? %>
-  <% @category_expenses.each do |expense_category| %>
-    <%= expense_category.expense.name %>
-    <%= expense_category.expense.amount %>
+<nav class="bg-primary text-white d-flex p-1" style="column-gap: 23%;">
+  <div class="fs-1">
+    <a href="<%= user_categories_path %>" class="text-white">
+      <i class="bi bi-arrow-left-short"></i>
+    </a>
+  </div>
+  <h5  class="d-flex align-items-center mb-0">TRANSACTIONS</h5>
+</nav>
+
+<div class="card p-1 m-2">
+  <%= render partial: 'shared/category_card', locals: { category: @category } %>
+
+  <h6 class="fw-bold" style="margin-left: 4%;">Transactions</h6>
+  <% if @category_expenses.present? %>
+    <ul class="p-3">
+      <% @category_expenses.each do |expense_category| %>
+
+        <li>
+          <i class="bi bi-bag-fill"></i>
+          <%= expense_category.expense.name %>
+          $ <%= expense_category.expense.amount %>
+        </li>
+
+      <% end %>
+    </ul>
+
+    <p class="text-secodary d-flex justify-content-between p-3">
+      <span>TOTAL PAYMENT</span>
+      <span class="fw-bold">$<%= format('%.2f', @category.expenses.sum(:amount)) %></span>
+    </p>
   <% end %>
-<% end %>
-<%= link_to "add a new transaction", new_user_category_expense_path %>
+</div>
+
+<div class="d-flex justify-content-center p-3 bg-success fixed-bottom">
+  <%= link_to "Add a new transaction", new_user_category_expense_path, class: "btn btn-success w-100 p-2" %>
+</div>
