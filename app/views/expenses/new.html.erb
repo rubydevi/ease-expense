@@ -18,16 +18,16 @@
       <%= f.label :amount, class: "col-sm-2 col-form-label" %>
     </div>
     
-    <div class="mb-3 mt-2">
+    <div class="mb-3">
       <%= f.select :id,
         Category.all.map { |category| [category.name, category.id] },
         { include_blank: 'Category' },
         class: "form-select"
       %>
     </div>
-</div>
     
     <div class="d-flex justify-content-center p-3 bg-success">
       <%= f.submit "Save", class: "btn btn-success w-100 p-2" %>
     </div>
   <% end %>
+</div>
