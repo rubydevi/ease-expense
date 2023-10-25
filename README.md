@@ -59,7 +59,7 @@ A fully functional mobile app that shows the list of categories and all the expe
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo 
-Live Demo for Ease Expense
+[Live Demo](https://ease-expense.onrender.com) for Ease Expense
 
 ## 🚀 Presentation 
 [Video presentation](https://drive.google.com/file/d/1P1aTyqGN4LtX4PXS-f3vvaKN1PpREEor/view?usp=sharing) for the app
