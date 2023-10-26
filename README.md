@@ -5,10 +5,11 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 ease-expense ](#-ease-expense-)
+- [📖 Ease Expense ](#-ease-expense-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -58,7 +59,7 @@ A fully functional mobile app that shows the list of categories and all the expe
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo 
+## 🚀 Live Demo <a name="live-demo"></a>
 [Live Demo](https://ease-expense.onrender.com) for Ease Expense
 
 ## 🚀 Presentation 
@@ -149,7 +150,7 @@ If you like this project and want to support me make cooler projects Give this p
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-🙏 Acknowledgments
+## 🙏 Acknowledgments <a name="acknowledgement"></a>
 
 I'd like to acknowledge [Gregoire Vella](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) for this amazing design.
 
